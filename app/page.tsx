@@ -19,7 +19,6 @@ import {
   ImageOff, 
   Menu, 
   X, 
-  Instagram, 
   Mail, 
   MapPin, 
   Phone,
@@ -27,6 +26,17 @@ import {
   ChevronRight,
   ChevronLeft
 } from 'lucide-react';
+
+// --- Icons ---
+const Instagram = ({ size = 24, className = "" }) => (
+  <svg 
+    width={size} height={size} viewBox="0 0 24 24" fill="none" 
+    stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" 
+    className={className}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+  </svg>
+);
 
 // --- Types ---
 interface Stat { number: string; label: string; icon: string; }
@@ -188,7 +198,7 @@ export default function Page() {
       {/* Hero Section - Pattern HR-B */}
       <section id="home" className="min-h-screen relative flex items-end pb-24 px-6 md:px-16 overflow-hidden">
         <SafeImage 
-          src="https://images.unsplash.com/photo-1738071020203-784282e6d4c6" 
+          src="https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=2071&auto=format&fit=crop" 
           alt="Chiommys Food" 
           fill 
           className="object-cover opacity-60" 
@@ -198,7 +208,7 @@ export default function Page() {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent" />
         
         <div className="relative z-10 max-w-4xl animate-slideUp">
-          <h1 className="font-heading text-6xl md:text-[7rem] font-black text-white leading-[0.85] tracking-tighter uppercase italic">
+          <h1 className="font-heading text-5xl md:text-8xl font-black text-white leading-[0.85] tracking-tighter uppercase italic">
             Fresh Heart <br />
             <span className="text-accent not-italic">of PH City.</span>
           </h1>
@@ -219,12 +229,12 @@ export default function Page() {
       <DGrid />
 
       {/* Features Section - Pattern F-ICON-GRID */}
-      <section id="features" className="py-28 px-6 bg-secondary relative overflow-hidden">
+      <section id="features" className="py-20 px-6 bg-secondary relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern pointer-events-none" />
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <div className="max-w-xl">
-              <h2 className="font-heading text-5xl md:text-6xl font-black text-white leading-none uppercase">
+              <h2 className="font-heading text-4xl md:text-5xl font-black text-white leading-none uppercase">
                 Our Quality <br /><span className="text-accent">Commitment</span>
               </h2>
             </div>
@@ -251,11 +261,11 @@ export default function Page() {
       </section>
 
       {/* Products Section - Pattern P-HORIZONTAL */}
-      <section id="menu" className="py-28 bg-primary relative overflow-hidden">
+      <section id="menu" className="py-20 bg-primary relative overflow-hidden">
         <div className="px-6 max-w-7xl mx-auto mb-16 flex justify-between items-end">
           <div>
             <span className="text-accent font-black tracking-widest uppercase text-xs mb-3 block">Tactile Menu Experience</span>
-            <h2 className="font-heading text-5xl font-black text-white uppercase italic">Today&apos;s Specialities</h2>
+            <h2 className="font-heading text-4xl md:text-5xl font-black text-white uppercase italic">Today&apos;s Specialities</h2>
           </div>
           <div className="hidden md:flex gap-4">
             <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/30"><ChevronLeft /></div>
@@ -290,7 +300,7 @@ export default function Page() {
       </section>
 
       {/* About Section - Custom Split with Stats */}
-      <section id="about" className="py-28 px-6 bg-secondary">
+      <section id="about" className="py-20 px-6 bg-secondary">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
           <div className="relative">
             <div className="aspect-square relative rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
@@ -300,7 +310,7 @@ export default function Page() {
             <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-accent rounded-3xl -z-10 animate-float" />
           </div>
           <div>
-            <h2 className="font-heading text-5xl font-black text-white leading-none uppercase mb-8">
+            <h2 className="font-heading text-4xl md:text-5xl font-black text-white leading-none uppercase mb-8">
               The <span className="text-accent">Chiommys</span> Story
             </h2>
             <p className="text-white/60 text-xl leading-relaxed mb-10">
@@ -327,9 +337,9 @@ export default function Page() {
       </section>
 
       {/* Testimonials - Pattern T-SLIDER */}
-      <section className="py-28 bg-primary overflow-hidden border-y border-white/5">
+      <section className="py-20 bg-primary overflow-hidden border-y border-white/5">
         <div className="max-w-7xl mx-auto px-6 mb-16">
-          <h2 className="font-heading text-5xl font-black text-white uppercase italic text-center">Customer Stories</h2>
+          <h2 className="font-heading text-4xl md:text-5xl font-black text-white uppercase italic text-center">Customer Stories</h2>
         </div>
         <div className="w-full overflow-hidden">
           <div className="flex w-[200%] gap-6 animate-slide-left hover:[animation-play-state:paused]">
@@ -357,19 +367,19 @@ export default function Page() {
       </section>
 
       {/* Contact Section - Pattern C3 */}
-      <section id="contact" className="py-28 px-6 bg-secondary relative">
+      <section id="contact" className="py-20 px-6 bg-secondary relative">
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <span className="text-accent font-black tracking-[0.4em] uppercase text-xs mb-6 block">Ready to Taste?</span>
-          <h2 className="font-heading text-6xl md:text-7xl font-black text-white uppercase leading-none mb-6">Place Your Order</h2>
+          <h2 className="font-heading text-5xl md:text-6xl font-black text-white uppercase leading-none mb-6">Place Your Order</h2>
           <p className="text-white/40 mb-14 text-lg">Send us a message and our team will get back to you immediately with availability and delivery timelines.</p>
           
           <ContactForm />
 
           <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="flex flex-col items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-accent">
-                <Instagram size={24} />
-              </div>
+                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-accent">
+                  <Instagram size={24} />
+                </div>
               <a href="https://instagram.com/chiommys_food_hub" className="text-white font-bold hover:text-accent transition-colors">@chiommys_food_hub</a>
             </div>
             <div className="flex flex-col items-center gap-4">
