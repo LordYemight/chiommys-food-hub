@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+
 const config: Config = {
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
@@ -6,7 +7,8 @@ const config: Config = {
       colors: {
         primary: "var(--primary)",
         secondary: "var(--secondary)",
-        accent: "var(--accent)"
+        accent: "var(--accent)",
+        "off-white": "#F9F7F2"
       },
       fontFamily: {
         heading: ["var(--font-heading)"],
